@@ -1,0 +1,94 @@
+[0m13:29:27.591927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054f5d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10635d4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10635df40>]}
+
+
+============================== 13:29:27.595000 | a440923e-4a61-4e4f-8366-04fba512d552 ==============================
+[0m13:29:27.595000 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:29:27.595466 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/kshitijpatil/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init nyc_taxi_project', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:29:27.602886 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object.. Dictionary: {'dir': PosixPath('/Users/kshitijpatil/.dbt')}
+[0m13:29:27.603206 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m13:29:27.604181 [debug] [MainThread]: Starter project path: /Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/include/starter_project
+[0m13:29:27.607915 [info ] [MainThread]: 
+Your new dbt project "nyc_taxi_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:29:27.608225 [info ] [MainThread]: Setting up your profile.
+[0m13:29:47.605153 [error] [MainThread]: Encountered an error:
+list index out of range
+[0m13:29:47.708389 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/cli/main.py", line 477, in init
+    results = task.run()
+  File "/Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/task/init.py", line 261, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/task/init.py", line 243, in ask_for_adapter_choice
+    return available_adapters[numeric_choice - 1]
+IndexError: list index out of range
+
+[0m13:29:47.715440 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 20.178497, "process_in_blocks": "0", "process_kernel_time": 0.136758, "process_mem_max_rss": "93061120", "process_out_blocks": "0", "process_user_time": 0.713708}
+[0m13:29:47.716447 [debug] [MainThread]: Command `dbt init` failed at 13:29:47.716254 after 20.18 seconds
+[0m13:29:47.716986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054f5d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063b0f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063a5250>]}
+[0m13:29:47.717560 [debug] [MainThread]: Flushing usage events
+[0m13:29:48.960648 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:54:14.133665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103501dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10436c610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10436cf70>]}
+
+
+============================== 22:54:14.138584 | 2f68ab84-f0fc-4c55-8ffc-1a05e10255c4 ==============================
+[0m22:54:14.138584 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:54:14.139137 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/kshitijpatil/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init dbt_quick_project', 'send_anonymous_usage_stats': 'True'}
+[0m22:54:14.150517 [debug] [MainThread]: Starter project path: /Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/include/starter_project
+[0m22:54:14.156174 [info ] [MainThread]: 
+Your new dbt project "dbt_quick_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:54:14.156437 [info ] [MainThread]: Setting up your profile.
+[0m22:54:17.563672 [error] [MainThread]: Encountered an error:
+list index out of range
+[0m22:54:17.584737 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/cli/main.py", line 477, in init
+    results = task.run()
+  File "/Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/task/init.py", line 261, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/Users/kshitijpatil/de_on_aws/de_venv/lib/python3.9/site-packages/dbt/task/init.py", line 243, in ask_for_adapter_choice
+    return available_adapters[numeric_choice - 1]
+IndexError: list index out of range
+
+[0m22:54:17.587854 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 3.5014715, "process_in_blocks": "0", "process_kernel_time": 0.147399, "process_mem_max_rss": "92323840", "process_out_blocks": "0", "process_user_time": 0.707955}
+[0m22:54:17.588420 [debug] [MainThread]: Command `dbt init` failed at 22:54:17.588290 after 3.50 seconds
+[0m22:54:17.588822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103501dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043df880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043b22e0>]}
+[0m22:54:17.589323 [debug] [MainThread]: Flushing usage events
+[0m22:54:18.523926 [debug] [MainThread]: An error was encountered while trying to flush usage events
