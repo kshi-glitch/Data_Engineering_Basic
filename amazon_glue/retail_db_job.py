@@ -4,6 +4,7 @@ import os
 import time
 import json
 import csv
+import pandas
 
 # Configuration
 LOCAL_DATA_PATH = "/Users/kshitijpatil/de_on_aws/retail_db"
