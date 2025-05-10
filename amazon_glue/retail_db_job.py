@@ -5,17 +5,17 @@ import time
 import json
 import csv
 import pandas
-
+#%%
 # Configuration
 LOCAL_DATA_PATH = "/Users/kshitijpatil/de_on_aws/retail_db"
-BUCKET_NAME = "kshitij-retail-bucket"  # Must be globally unique
-REGION = "ap-southeast-2"  # Change to your preferred region
+BUCKET_NAME = "kshitij-retail-bucket"  
+REGION = "ap-southeast-2"  
 DATABASE_NAME = "retail_db"
 CRAWLER_NAME = "retail_db_crawler"
 IAM_ROLE_NAME = "AWSGlueRetailDBRole"
 S3_DATA_PATH = f"s3://{BUCKET_NAME}/retail_db/"
 ATHENA_RESULTS_PATH = f"s3://{BUCKET_NAME}/athena-results/"
-FILE_EXTENSION = ""  # Change to ".json" or ".parquet" if needed
+FILE_EXTENSION = ""  
 
 # AWS Clients
 s3_client = boto3.client("s3", region_name=REGION)
@@ -39,7 +39,6 @@ def add_headers_to_files():
     for table, columns in TABLE_COLUMNS.items():
         file_path = os.path.join(LOCAL_DATA_PATH, table, "part-00000")
         if os.path.exists(file_path):
-            # Read existing data
             with open(file_path, 'r') as infile:
                 reader = csv.reader(infile)
                 rows = list(reader)

@@ -3,6 +3,10 @@ import pandas as pd
 import boto3
 import json
 import os
+import os
+import pandas as pd
+import sqlalchemy
+from sqlalchemy.exc import IntegrityError
 #%%
 
 secret_name = "retail_db_postgres_creds"
@@ -39,16 +43,13 @@ path = '/Users/kshitijmac/de_on_aws/retail_db_json'
 table_name = 'categories'
 df_categories = json_to_df(path,table_name)
 #%%
-import sqlalchemy
+
 conn = f"postgresql://{username}:{password}@{host}:{port}/{dbname}"
 df_categories.to_sql('categories',conn, if_exists= 'append', index=False)
 # %%
 
 #populate every table
-import os
-import pandas as pd
-import sqlalchemy
-from sqlalchemy.exc import IntegrityError
+
 
 # Base path for JSON files
 path = '/Users/kshitijmac/de_on_aws/retail_db_json'

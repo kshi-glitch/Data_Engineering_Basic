@@ -1,6 +1,10 @@
 #%%
 import boto3
 import os
+import time
+import pandas as pd
+import pandas as pd
+
 
 athena_client  = boto3.client('athena')
 print("Client Created")
@@ -34,8 +38,6 @@ table_name = [tables['Name'] for tables in tables_metadata['TableMetadataList']]
 category_table = table_name[0]
 category_metadata = athena_client.get_table_metadata(CatalogName = CatalogName, DatabaseName = database_name, TableName = category_table)
 # %%
-import pandas as pd
-
 def metadata_to_dataframe(metadata):
     columns = metadata['TableMetadata']['Columns']
     
@@ -57,7 +59,6 @@ category_metadata = athena_client.get_table_metadata(
 category_df = metadata_to_dataframe(category_metadata)
 
 # %%
-import time
 s3_output = 's3://kshitij-de-bucket/boto3queryresults/'  
 database = 'retail_db' 
 query = 'SELECT count(*) FROM retail_db.orders'
@@ -89,8 +90,6 @@ else:
 # %%
 #now if the query results are in data and i want to convert them to dataframe
  
-import pandas as pd
-
 query_dataframe = f'SELECT * FROM retail_db.categories LIMIT 10'
 
 response_1 = athena_client.start_query_execution(
